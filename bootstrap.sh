@@ -14,9 +14,11 @@ if [ ! -d $DOTFILES_DIR ]; then
     echo "dotfiles: clone git repository"
     git clone -q https://github.com/mrkanister/dotfiles.git $DOTFILES_DIR
 
-    echo "dotfiles: create symlink"
+    echo "dotfiles: create symlink in /usr/local/bin"
     sudo ln -s "${DOTFILES_DIR}/dotfiles.sh" /usr/local/bin/dotfiles
 else
     echo "dotfiles: update git repository"
     git -C $DOTFILES_DIR pull -q
 fi
+
+dotfiles
