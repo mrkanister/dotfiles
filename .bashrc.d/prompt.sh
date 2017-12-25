@@ -24,8 +24,8 @@ get_prompt() {
     local PS1_GIT="${COLOR_GREEN}\$(get_git_info)${COLOR_DEFAULT}"
 
     # "[(chroot)]<user>@<host>:<path>[ (git:project/branch)]$ "
-    echo "${PS1_CHROOT}${PS1_USER}:${PS1_PWD}${PS1_GIT}$ "
+    echo "${PS1_CHROOT}${PS1_USER} ${PS1_PWD}${PS1_GIT} \$ "
 }
 
-PS1="$(get_prompt)"
+export PS1="$(get_prompt)"
 unset -f get_prompt

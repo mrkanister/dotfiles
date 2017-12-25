@@ -8,6 +8,7 @@ echo "dotfiles: bootstrap to $DOTFILES_DIR"
 
 if ! command -v git > /dev/null; then
     echo "dotfiles: install git"
+    sudo apt-get update -qq
     sudo apt-get install -qq git
 fi
 
