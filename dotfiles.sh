@@ -10,7 +10,6 @@ if [ "$STATUS" != "Already up-to-date." ]; then
 fi
 
 echo "dotfiles: install software"
-sudo apt-get update -qq
 for file in "$DOTFILES_DIR/software/"*.sh; do
     bash "$file"
 done

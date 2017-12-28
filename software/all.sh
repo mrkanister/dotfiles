@@ -29,4 +29,6 @@ if [ -z "$TO_INSTALL" ]; then
 fi
 
 echo "dotfiles: install $TO_INSTALL"
+
+sudo apt-get update -qq
 echo $TO_INSTALL | xargs -I{} sudo apt-get -y install {}
