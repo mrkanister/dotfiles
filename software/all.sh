@@ -8,6 +8,7 @@ SOFTWARE="
     git
     golang-1.9
     inkscape
+    numlockx
     pwgen
     tmux
     tree
