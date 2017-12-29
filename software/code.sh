@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 COMMAND="code"
 URL="https://go.microsoft.com/fwlink/?LinkID=760868"
 
