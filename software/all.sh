@@ -21,7 +21,7 @@ SOFTWARE="
 TO_INSTALL=$(
     echo $SOFTWARE \
     | xargs \
-        dpkg-query -W -f='${Status} ${Package}\n' \
+        dpkg-query -W -f='${Status} ${Package}\n' 2>&1 \
     | grep -v 'install ok installed' \
     | awk '{print $NF}'
 )
