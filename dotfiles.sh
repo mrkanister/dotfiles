@@ -6,7 +6,7 @@ DOTFILES_DIR="$(dirname "$(readlink -f "$0")")"
 
 # make sure the script itself is update-to-date
 echo "dotfiles: update git repository"
-STATUS=$(git -C "$DOTFILES_DIR" pull --q --ff-only)
+STATUS=$(git -C "$DOTFILES_DIR" pull --ff-only)
 if [ "$STATUS" != "Already up-to-date." ]; then
     exec "$0"
 fi
