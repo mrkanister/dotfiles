@@ -17,7 +17,7 @@ if [ ! -d "$DOTFILES_DIR" ]; then
     git clone -q https://github.com/mrkanister/dotfiles.git "$DOTFILES_DIR"
 else
     echo "dotfiles: update git repository"
-    git -C "$DOTFILES_DIR" pull -q
+    git -C "$DOTFILES_DIR" pull -q --ff-only
 fi
 
 TARGET=/usr/local/bin/dotfiles
