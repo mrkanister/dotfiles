@@ -12,6 +12,7 @@ SOFTWARE="
     inkscape
     numlockx
     pwgen
+    quodlibet
     tmux
     tree
     vim
