@@ -7,6 +7,7 @@ SOFTWARE="
     colordiff
     curl
     devscripts
+    exfalso
     git
     golang-1.9
     inkscape
