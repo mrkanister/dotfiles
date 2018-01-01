@@ -17,6 +17,7 @@ SOFTWARE="
     tmux
     tree
     vim
+    xclip
 "
 
 # Filter packages that are already installed to have cleaner output.
