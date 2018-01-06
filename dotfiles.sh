@@ -17,7 +17,7 @@ for file in "$DOTFILES_DIR/software/"*.sh; do
 done
 
 echo "dotfiles: install configurations"
-cp -rf "$DOTFILES_DIR/.bashrc.d" "$HOME"
+cp -rf "$DOTFILES_DIR/HOME/.bashrc.d" "$HOME"
 . "$HOME/.bashrc"
 
 echo "dotfiles: TODO"
