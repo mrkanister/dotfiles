@@ -16,6 +16,7 @@ SOFTWARE="
     quodlibet
     tmux
     tree
+    ttf-mscorefonts-installer
     vim
     xclip
     youtube-dl
