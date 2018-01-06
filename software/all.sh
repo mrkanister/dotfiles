@@ -18,6 +18,7 @@ SOFTWARE="
     tree
     vim
     xclip
+    youtube-dl
 "
 
 # Filter packages that are already installed to have cleaner output.
