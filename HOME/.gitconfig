@@ -1,0 +1,10 @@
+# Put your user name and email in environment variables as described at
+# https://git-scm.com/book/gr/v2/Git-Internals-Environment-Variables
+
+[alias]
+	adog = log --all --decorate --oneline --graph
+	ds   = diff --staged
+	st   = status
+
+[core]
+	editor = vi
