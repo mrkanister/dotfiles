@@ -1,0 +1,8 @@
+# Ask for network policy at start (boolean)
+qt-privacy-ask=0
+
+# Allow only one running instance (boolean)
+one-instance=1
+
+# Allow metadata network access (boolean)
+metadata-network-access=1
