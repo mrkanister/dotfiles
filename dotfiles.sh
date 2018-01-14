@@ -17,6 +17,10 @@ for file in "$DOTFILES_DIR/software/"*.sh; do
 done
 
 echo "dotfiles: install configurations"
+INCLUDE='. <(cat ~/.bashrc.d/*)'
+if ! grep --quiet --fixed-strings "$INCLUDE" "$HOME/.bashrc"; then
+    echo -e "\n$INCLUDE" >> "$HOME/.bashrc"
+fi
 cp -rT "$DOTFILES_DIR/HOME" "$HOME"
 . "$HOME/.bashrc"
 
