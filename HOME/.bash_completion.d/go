@@ -4,14 +4,18 @@ function _go() {
     local cur=${COMP_WORDS[COMP_CWORD]}
     local prev=${COMP_WORDS[COMP_CWORD-1]}
 
-    local commands=" \
-        build clean doc env fix fmt generate get help install list run \
-        test version vet \
-    "
+    local commands="build clean doc env fix fmt generate get install \
+                    list run test version vet"
+
+    local topics="$commands buildmode c environment filetype gopath \
+                  importpath packages testflag testfunc"
 
     case $prev in
-    go|help)
-        COMPREPLY=($(compgen -W "$commands" -- $cur))
+    go)
+        COMPREPLY=($(compgen -W "$commands help" -- $cur))
+        ;;
+    help)
+        COMPREPLY=($(compgen -W "$topics" -- $cur))
         ;;
     build|fmt|install|test|vet)
         local pkgs
