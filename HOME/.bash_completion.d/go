@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function _go() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local prev=${COMP_WORDS[COMP_CWORD-1]}
+
+    local commands=" \
+        build clean doc env fix fmt generate get help install list run \
+        test version vet \
+    "
+
+    case $prev in
+    go|help)
+        COMPREPLY=($(compgen -W "$commands" -- $cur))
+        ;;
+    build|fmt|install|test|vet)
+        local pkgs
+        if [[ -z ${cur// } ]]; then
+            pkgs=$(go list ./... 2> /dev/null)
+        else
+            pkgs=$(go list $cur... 2> /dev/null)
+        fi
+        COMPREPLY=($(compgen -W "$pkgs" -- $cur))
+        ;;
+    esac
+
+    return 0
+}
+
+complete -F _go go
