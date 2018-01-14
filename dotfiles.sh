@@ -73,15 +73,15 @@ if [ "$STATUS" != "Already up-to-date." ]; then
     exec "$0"
 fi
 
-echo "dotfiles: check for new repositories"
+echo "dotfiles: install new repositories"
 install_repositories
 unset -f install_repositories
 
-echo "dotfiles: check for new software"
+echo "dotfiles: install new software"
 install_software
 unset -f install_software
 
-echo "dotfiles: check for new configuration"
+echo "dotfiles: install new configurations"
 install_configuration
 unset -f install_configuration
 
