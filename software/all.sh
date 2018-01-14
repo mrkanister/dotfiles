@@ -12,6 +12,7 @@ SOFTWARE="
     golang-1.9
     inkscape
     numlockx
+    pdfshuffler
     pwgen
     quodlibet
     tmux
