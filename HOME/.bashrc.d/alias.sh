@@ -5,3 +5,5 @@ alias susu='\
  && sudo apt-get autoremove \
  && sudo apt-get clean \
 '
+
+alias tree='tree --dirsfirst'
