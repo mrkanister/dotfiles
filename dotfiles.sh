@@ -85,4 +85,9 @@ echo "dotfiles: install new configurations"
 install_configuration
 unset -f install_configuration
 
+echo "dotfiles: run custom scripts"
+for script in "$DOTFILES_DIR/custom/"*; do
+    . "$script"
+done
+
 echo "dotfiles: all done"
