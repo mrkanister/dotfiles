@@ -1,5 +1,12 @@
 # Put your user name and email in environment variables as described at
 # https://git-scm.com/book/gr/v2/Git-Internals-Environment-Variables
+#
+# For Example:
+#
+# export GIT_AUTHOR_NAME="..."
+# export GIT_AUTHOR_EMAIL="..."
+#
+# export EMAIL=$GIT_AUTHOR_EMAIL
 
 [alias]
 	adog = log --all --decorate --oneline --graph
