@@ -1,0 +1,5 @@
+[AC][DPMSControl]
+# empty on purpose
+
+[AC][HandleButtonEvents]
+powerButtonAction=8
