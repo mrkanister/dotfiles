@@ -9,3 +9,7 @@
 "\e[5D": backward-word
 "\e\e[C": forward-word
 "\e\e[D": backward-word
+
+# mappings for Ctrl+Backspace and Ctrl+Delete for word deleting
+"\e[3;5~": kill-word
+"\e[9;3~": backward-kill-word
