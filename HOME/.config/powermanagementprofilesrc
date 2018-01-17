@@ -2,4 +2,13 @@
 # empty on purpose
 
 [AC][HandleButtonEvents]
+lidAction=1
+powerButtonAction=8
+
+[Battery][HandleButtonEvents]
+lidAction=1
+powerButtonAction=8
+
+[LowBattery][HandleButtonEvents]
+lidAction=1
 powerButtonAction=8
