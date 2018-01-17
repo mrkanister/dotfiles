@@ -41,7 +41,8 @@ install_repositories() {
 
 install_software() {
     local to_install=$(
-        grep -v '^\s*#' "$DOTFILES_DIR/software.list" \
+        cat "$DOTFILES_DIR/software.list" \
+        | grep -o '^\s*[^#]\+' \
         | xargs apt-get install --dry-run \
         | grep '^Inst ' \
         | cut -d" " -f2
