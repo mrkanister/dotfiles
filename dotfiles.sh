@@ -66,11 +66,17 @@ install_configuration() {
     . "$HOME/.bashrc"
 }
 
-# make sure the script itself is update-to-date
-echo "dotfiles: update dotfiles"
-STATUS=$(git -C "$DOTFILES_DIR" pull --ff-only)
-if [ "$STATUS" != "Already up-to-date." ]; then
-    exec "$0"
+if [ "$1" != "--skip-update" ]; then
+    # make sure the script itself is update-to-date
+    echo "dotfiles: update dotfiles"
+    STATUS=$(git -C "$DOTFILES_DIR" pull --ff-only)
+    if [ "$STATUS" == "Already up-to-date." ]; then
+        echo "dotfiles: already up-to-date"
+        exit
+    fi
+
+    # rerun the script which itself may have been updated
+    exec "$0" --skip-update
 fi
 
 echo "dotfiles: install new repositories"
@@ -87,6 +93,7 @@ unset -f install_configuration
 
 echo "dotfiles: run custom scripts"
 for script in "$DOTFILES_DIR/custom/"*; do
+    echo "dotfiles: - ${script##*/}"
     . "$script"
 done
 
