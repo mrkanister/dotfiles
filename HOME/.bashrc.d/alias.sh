@@ -1,3 +1,5 @@
+alias ..='cd ..'
+
 alias susu='\
     sudo apt-get update \
  && sudo apt-get upgrade \
