@@ -1,1 +1,1 @@
-. <(cat ~/.bash_completion.d/*)
+. <(cat $HOME/.bash_completion.d/*)

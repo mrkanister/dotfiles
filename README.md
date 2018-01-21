@@ -12,7 +12,7 @@ bash <(wget -o /dev/null -O - "https://raw.githubusercontent.com/mrkanister/dotf
 
 - Use [Process Substitution](1) to avoid temporary files
 - Make sure Git is installed
-- Clone this repository to `~/.config/dotfiles`
+- Clone this repository to `$HOME/.config/dotfiles`
 - Create a symlink to `dotfiles.sh` as `/usr/local/bin/dotfiles`
 
 Subsequent calls to `dotfiles` will update the repository and also the

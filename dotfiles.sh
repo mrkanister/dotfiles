@@ -2,7 +2,7 @@
 
 set -e
 
-DOTFILES_DIR="$(dirname "$(readlink -f "$0")")"
+DOTFILES_DIR="$(dirname "$(readlink --canonicalize "$0")")"
 
 install_repositories() {
     local changes
@@ -35,7 +35,7 @@ install_repositories() {
     done
 
     if [ "$changes" = "true" ]; then
-        sudo apt-get update -qq
+        sudo apt-get update --quiet=2
     fi
 }
 
@@ -43,8 +43,8 @@ install_software() {
     local to_install=$(
         cat "$DOTFILES_DIR/software.list" \
         | xargs apt-cache policy \
-        | grep -B1 'Installed: (none)' \
-        | grep -o '^\w[^:]*'
+        | grep --before-context=1 'Installed: (none)' \
+        | grep --only-matching '^\w[^:]*'
     )
 
     if [ -z "$to_install" ]; then
@@ -53,16 +53,16 @@ install_software() {
 
     echo "dotfiles: - $to_install"
 
-    sudo apt-get update -qq
-    echo $to_install | xargs sudo apt-get -y install
+    sudo apt-get update --quiet=2
+    echo $to_install | xargs sudo apt-get --assume-yes install
 }
 
 install_configuration() {
-    local include='. <(cat ~/.bashrc.d/*)'
-    if ! grep --quiet --fixed-strings "$include" "$HOME/.bashrc"; then
+    local include=". <(cat $HOME/.bashrc.d/*)"
+    if ! grep --fixed-strings --quiet "$include" "$HOME/.bashrc"; then
         echo -e "\n$include" >> "$HOME/.bashrc"
     fi
-    cp -rT "$DOTFILES_DIR/HOME" "$HOME"
+    cp --no-target-directory --recursive "$DOTFILES_DIR/HOME" "$HOME"
     . "$HOME/.bashrc"
 }
 
