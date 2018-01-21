@@ -42,10 +42,9 @@ install_repositories() {
 install_software() {
     local to_install=$(
         cat "$DOTFILES_DIR/software.list" \
-        | grep -o '^\s*[^#]\+' \
-        | xargs apt-get install --dry-run \
-        | grep '^Inst ' \
-        | cut -d" " -f2
+        | xargs apt-cache policy \
+        | grep -B1 'Installed: (none)' \
+        | grep -o '^\w[^:]*'
     )
 
     if [ -z "$to_install" ]; then
