@@ -7,3 +7,5 @@ alias susu='\
 '
 
 alias tree='tree --dirsfirst'
+
+alias xclip='xclip -sel c'
