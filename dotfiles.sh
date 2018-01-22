@@ -57,7 +57,7 @@ install_software() {
     echo $to_install | xargs sudo apt-get --assume-yes install
 }
 
-install_configuration() {
+install_configurations() {
     local include=". <(cat $HOME/.bashrc.d/*)"
     if ! grep --fixed-strings --quiet "$include" "$HOME/.bashrc"; then
         echo -e "\n$include" >> "$HOME/.bashrc"
@@ -88,8 +88,8 @@ install_software
 unset -f install_software
 
 echo "dotfiles: install new configurations"
-install_configuration
-unset -f install_configuration
+install_configurations
+unset -f install_configurations
 
 echo "dotfiles: run custom scripts"
 for script in "$DOTFILES_DIR/custom/"*; do
