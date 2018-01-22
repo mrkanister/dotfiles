@@ -19,6 +19,9 @@ Subsequent calls to `dotfiles` will update the repository and also the
 script itself. After that, it's mostly copying configurations to `$HOME`
 and installing new software from the `software.list` file.
 
+On the first run, you may have to execute it with the `--skip-update`
+flag, because it will exit if there were no new revisions to pull.
+
 ## Compatibility
 
 I am currently using `dotfiles` on the following machines:
