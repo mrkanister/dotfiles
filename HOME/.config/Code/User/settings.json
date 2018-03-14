@@ -4,6 +4,7 @@
         72,
         80
     ],
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
