@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export GOROOT="/usr/lib/go-1.9"
 export GOPATH="$HOME/code"
 

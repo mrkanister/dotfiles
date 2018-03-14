@@ -1,13 +1,15 @@
-get_git_info() {
-    local toplevel=$(git rev-parse --show-toplevel 2> /dev/null)
+#!/bin/bash
 
+get_git_info() {
+    local toplevel project branch
+
+    toplevel=$(git rev-parse --show-toplevel 2> /dev/null)
     if [[ -z $toplevel ]]; then
         return
     fi
 
-    local project=${toplevel##*/}
-    local branch=$(git symbolic-ref --short HEAD)
-
+    project=${toplevel##*/}
+    branch=$(git symbolic-ref --short HEAD)
     echo " (git:$project/$branch)"
 }
 
@@ -27,5 +29,6 @@ get_prompt() {
     echo "${PS1_CHROOT}${PS1_USER} ${PS1_PWD}${PS1_GIT} \$ "
 }
 
-export PS1="$(get_prompt)"
+PS1="$(get_prompt)"
 unset -f get_prompt
+export PS1

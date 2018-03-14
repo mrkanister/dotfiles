@@ -1,12 +1,6 @@
-alias ..='cd ..'
+#!/bin/bash
 
-alias susu='\
-    sudo apt-get update \
- && sudo apt-get upgrade \
- && sudo apt-get dist-upgrade \
- && sudo apt-get autoremove \
- && sudo apt-get clean \
-'
+alias ..='cd ..'
 
 alias tree='tree --dirsfirst'
 
