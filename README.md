@@ -26,7 +26,7 @@ flag, because it will exit if there were no new revisions to pull.
 
 I am currently using `dotfiles` on the following machines:
 
-- Laptop: Kubuntu 17.04
+- Laptop: Kubuntu 17.10
 - Desktop: Kubuntu 17.10
 
 This means that some of the configurations (e.g. `dolphinrc`) will
