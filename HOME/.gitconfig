@@ -10,6 +10,7 @@
 
 [alias]
 	adog = log --all --decorate --oneline --graph
+	co   = checkout
 	ds   = diff --staged
 	st   = status
 
