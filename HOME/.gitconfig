@@ -14,6 +14,8 @@
 	ds   = diff --staged
 	st   = status
 
+	diff-merge = "!f() { c=${1-HEAD}; git diff $c^ $c; }; f"
+
 [core]
 	editor = vi
 
