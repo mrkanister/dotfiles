@@ -20,4 +20,5 @@
 	editor = vi
 
 [fetch]
-	prune = true
+	prune     = true
+	pruneTags = true
