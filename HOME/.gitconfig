@@ -16,6 +16,9 @@
 
 	diff-merge = "!f() { c=${1-HEAD}; git diff $c^ $c; }; f"
 
+[commit]
+	verbose = true
+
 [core]
 	editor = vi
 
