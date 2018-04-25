@@ -13,6 +13,7 @@
 	co   = checkout
 	ds   = diff --staged
 	st   = status
+	wiff = diff --ignore-all-space
 
 	diff-merge = "!f() { c=${1-HEAD}; git diff $c^ $c; }; f"
 
