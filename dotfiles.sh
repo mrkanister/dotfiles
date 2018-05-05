@@ -97,7 +97,7 @@ unset -f install_configurations
 echo "dotfiles: run custom scripts"
 for script in "$DOTFILES_DIR/custom/"*; do
     echo "dotfiles: - ${script##*/}"
-    . "$script"
+    bash "$script"
 done
 
 echo "dotfiles: all done"
