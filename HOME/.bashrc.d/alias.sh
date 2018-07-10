@@ -2,6 +2,8 @@
 
 alias ..='cd ..'
 
+alias igrep='grep -riI'
+
 alias tree='tree --dirsfirst'
 
 alias xclip='xclip -selection clipboard'
