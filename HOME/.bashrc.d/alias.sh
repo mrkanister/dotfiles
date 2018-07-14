@@ -6,6 +6,8 @@ alias igrep='grep -riI'
 
 alias tree='tree --dirsfirst'
 
+alias wig='tig --ignore-all-space'
+
 alias xclip='xclip -selection clipboard'
 
 alias xopen='xdg-open'
