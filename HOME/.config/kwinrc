@@ -1,2 +1,12 @@
-[Effect-PresentWindows]
-BorderActivateAll=-1
+ [Effect-PresentWindows]
+BorderActivateAll=9
+
+[ElectricBorders]
+Bottom=None
+BottomLeft=None
+BottomRight=None
+Left=None
+Right=None
+Top=None
+TopLeft=None
+TopRight=None
