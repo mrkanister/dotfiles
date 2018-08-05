@@ -66,7 +66,7 @@ install_configurations() {
         echo -e "\n$include" >> "$HOME/.bashrc"
     fi
     cp --no-target-directory --recursive "$DOTFILES_DIR/HOME" "$HOME"
-    . "$HOME/.bashrc"
+    . <(cat $HOME/.bashrc.d/*)
 }
 
 if [ "$1" != "--skip-update" ]; then
