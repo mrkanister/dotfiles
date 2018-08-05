@@ -54,7 +54,7 @@ install_software() {
         return
     fi
 
-    echo "dotfiles: - $to_install"
+    echo "dotfiles: - $(tr '\n' ' ' <<< $to_install)"
 
     sudo apt-get update --quiet=2
     echo $to_install | xargs sudo apt-get --assume-yes install
