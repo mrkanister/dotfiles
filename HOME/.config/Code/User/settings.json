@@ -10,4 +10,5 @@
     "explorer.sortOrder": "type",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "shellcheck.disableVersionCheck": true,
 }
