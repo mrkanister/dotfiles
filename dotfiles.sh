@@ -72,11 +72,15 @@ install_configurations() {
 if [ "$1" != "--skip-update" ]; then
     # make sure the script itself is update-to-date
     echo "dotfiles: update dotfiles"
-    STATUS=$(git -C "$DOTFILES_DIR" pull --ff-only)
-    if [ "$STATUS" == "Already up-to-date." ]; then
+
+    pushd "$DOTFILES_DIR"
+    git fetch
+    if [ "$(git rev-parse master)" == "$(git rev-parse origin/master)" ]; then
         echo "dotfiles: already up-to-date"
         exit
     fi
+    git merge --ff-only
+    popd
 
     # rerun the script which itself may have been updated
     exec "$0" --skip-update
