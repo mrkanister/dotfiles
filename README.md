@@ -24,8 +24,7 @@ and installing new software from the `software.list` file.
 
 I am currently using `dotfiles` on the following machines:
 
-- Laptop: Kubuntu 17.10
-- Desktop: Kubuntu 17.10
+- Laptop: Kubuntu 18.04
 
 This means that some of the configurations (e.g. `dolphinrc`) will
 probably only make sense on a system running KDE applications.
