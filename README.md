@@ -14,13 +14,11 @@ bash <(wget -o /dev/null -O - "https://raw.githubusercontent.com/mrkanister/dotf
 - Make sure Git is installed
 - Clone this repository to `$HOME/.config/dotfiles`
 - Create a symlink to `dotfiles.sh` as `/usr/local/bin/dotfiles`
+- Run `dotfiles`
 
 Subsequent calls to `dotfiles` will update the repository and also the
 script itself. After that, it's mostly copying configurations to `$HOME`
 and installing new software from the `software.list` file.
-
-On the first run, you may have to execute it with the `--skip-update`
-flag, because it will exit if there were no new revisions to pull.
 
 ## Compatibility
 

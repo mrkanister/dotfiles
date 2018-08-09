@@ -25,3 +25,4 @@ echo "dotfiles: create symlink: $TARGET -> $DOTFILES_DIR/dotfiles.sh"
 sudo ln --force --symbolic "$DOTFILES_DIR/dotfiles.sh" "$TARGET"
 
 echo "dotfiles: command 'dotfiles' successfully installed"
+dotfiles --skip-update
