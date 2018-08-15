@@ -4,4 +4,5 @@ if command -v dep > /dev/null; then
     exit
 fi
 
-go get github.com/golang/dep/cmd/dep
+wget --quiet --output-document "$GOPATH/bin/dep" \
+    "https://github.com/golang/dep/releases/download/v0.5.0/dep-linux-amd64"
