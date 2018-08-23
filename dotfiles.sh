@@ -73,14 +73,14 @@ if [ "$1" != "--skip-update" ]; then
     # make sure the script itself is update-to-date
     echo "dotfiles: update dotfiles"
 
-    pushd "$DOTFILES_DIR"
+    pushd "$DOTFILES_DIR" > /dev/null
     git fetch
     if [ "$(git rev-parse master)" == "$(git rev-parse origin/master)" ]; then
         echo "dotfiles: already up-to-date"
         exit
     fi
     git merge --ff-only
-    popd
+    popd > /dev/null
 
     # rerun the script which itself may have been updated
     exec "$0" --skip-update
