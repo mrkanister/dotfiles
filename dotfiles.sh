@@ -76,7 +76,7 @@ if [ "$1" != "--skip-update" ]; then
     pushd "$DOTFILES_DIR" > /dev/null
     git fetch
     if [ "$(git rev-parse master)" == "$(git rev-parse origin/master)" ]; then
-        echo "dotfiles: already up-to-date"
+        echo "dotfiles: already up to date"
         exit
     fi
     git merge --ff-only
