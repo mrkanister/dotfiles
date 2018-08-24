@@ -46,7 +46,7 @@ install_software() {
     local to_install=$(
         xargs -a "$DOTFILES_DIR/software.list" \
             apt-cache policy \
-        | grep --before-context=1 'Installed: (none)' \
+        | grep --before-context 1 '(.*)' \
         | grep --only-matching '^\w[^:]*'
     )
 
