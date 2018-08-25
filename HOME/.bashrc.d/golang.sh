@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export GOROOT="/usr/lib/go-1.10"
+export GOROOT="/opt/go/1.11"
 export GOPATH="$HOME/code"
 
 export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
