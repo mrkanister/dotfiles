@@ -13,4 +13,5 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "shellcheck.disableVersionCheck": true,
+    "workbench.settings.editor": "json",
 }
