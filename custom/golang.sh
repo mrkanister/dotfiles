@@ -1,13 +1,21 @@
 #!/bin/bash
 set -euo pipefail
 
-VERSION="1.11"
+BASEDIR="/opt/go"
+VERSION="1.11.1"
+GODIR="$BASEDIR/$VERSION"
 URL="https://dl.google.com/go/go$VERSION.linux-amd64.tar.gz"
-DIRECTORY="/opt/go/$VERSION"
 
-if [[ -d $DIRECTORY ]]; then
+if [[ -d $GODIR ]]; then
     exit
 fi
 
-sudo mkdir -p $DIRECTORY
-curl $URL | sudo tar -C $DIRECTORY -xzf - --strip-components=1
+sudo mkdir -p $GODIR
+curl $URL | sudo tar -C $GODIR -xzf - --strip-components=1
+
+# Remove older (other) versions of Go
+sudo find $BASEDIR \
+    -mindepth 1 -maxdepth 1 \
+    -type d \
+    ! -wholename $GODIR \
+    -exec rm -rf {} \;
