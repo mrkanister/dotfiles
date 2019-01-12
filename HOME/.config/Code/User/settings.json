@@ -1,4 +1,4 @@
-// Visual Studio Code v1.28.0
+// Visual Studio Code v1.30.0
 {
     "breadcrumbs.enabled": true,
     "editor.minimap.enabled": false,
@@ -17,4 +17,7 @@
     "files.trimFinalNewlines": true,
     "shellcheck.disableVersionCheck": true,
     "workbench.settings.editor": "json",
+    "[markdown]": {
+        "editor.wordWrap": "off",
+    }
 }
