@@ -1,6 +1,5 @@
-// Visual Studio Code v1.30.0
+// Visual Studio Code v1.38.1
 {
-    "breadcrumbs.enabled": true,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
@@ -15,6 +14,7 @@
     "extensions.ignoreRecommendations": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "go.useLanguageServer": true,
     "shellcheck.disableVersionCheck": true,
     "workbench.settings.editor": "json",
     "[markdown]": {
