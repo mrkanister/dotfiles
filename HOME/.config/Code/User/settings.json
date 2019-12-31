@@ -1,4 +1,4 @@
-// Visual Studio Code v1.38.1
+// Visual Studio Code v1.41.1
 {
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
@@ -14,10 +14,14 @@
     "extensions.ignoreRecommendations": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "go.useLanguageServer": true,
-    "shellcheck.disableVersionCheck": true,
     "workbench.settings.editor": "json",
     "[markdown]": {
         "editor.wordWrap": "off",
-    }
+    },
+    "javascript.format.semicolons": "remove",
+    "typescript.format.semicolons": "remove",
+    "go.useLanguageServer": true,
+    "printcode.tabSize": 4,
+    "shellcheck.disableVersionCheck": true,
+    "shellcheck.enableQuickFix": true,
 }
