@@ -22,6 +22,7 @@
 
 [core]
 	editor = vi
+	excludesfile = ~/.gitignore
 
 [fetch]
 	prune     = true
