@@ -7,6 +7,10 @@ kwriteconfig5 --file "$HOME/.config/kdeglobals" \
 kwriteconfig5 --file "$HOME/.kde/share/config/kdeglobals" \
     --group "KDE" --key "SingleClick" --type "bool" true
 
+# Don't show "Confirm Close" for more than two open terminals.
+kwriteconfig5 --file "$HOME/.config/konsolerc" \
+    --group "Notification Messages" --key "CloseAllTabs" --type "bool" true
+
 # Disable "Switch to Desktop" shortcuts to avoid collisions with VSCode.
 for i in 1 2 3 4; do
     kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
