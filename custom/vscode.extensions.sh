@@ -4,7 +4,7 @@ EXTENSIONS=$(cat <<EOF
 DavidAnson.vscode-markdownlint
 mechatroner.rainbow-csv
 ms-vscode.Go
-nobuhito.printcode
+redhat.vscode-yaml
 stkb.rewrap
 timonwong.shellcheck
 EOF
