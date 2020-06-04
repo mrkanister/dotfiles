@@ -11,6 +11,7 @@
 [alias]
 	co   = checkout
 	ds   = diff --staged
+	fush = push --force-with-lease
 	st   = status
 	up   = push --set-upstream origin HEAD
 	wiff = diff --ignore-all-space
