@@ -2,8 +2,8 @@
 
 EXTENSIONS=$(cat <<EOF
 DavidAnson.vscode-markdownlint
+golang.Go
 mechatroner.rainbow-csv
-ms-vscode.Go
 redhat.vscode-yaml
 stkb.rewrap
 timonwong.shellcheck
