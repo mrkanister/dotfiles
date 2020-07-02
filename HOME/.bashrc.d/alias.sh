@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias dotfiles="\$HOME/.config/dotfiles/dotfiles.sh"
+
 alias ..='cd ..'
 
 alias igrep='grep -riI'

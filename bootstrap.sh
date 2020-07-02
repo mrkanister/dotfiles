@@ -2,7 +2,7 @@
 
 set -e
 
-DOTFILES_DIR=${DOTFILES_DIR:-$HOME/.config/dotfiles}
+DOTFILES_DIR="$HOME/.config/dotfiles"
 
 echo "dotfiles: bootstrap to $DOTFILES_DIR"
 
@@ -20,9 +20,5 @@ else
     git -C "$DOTFILES_DIR" pull --ff-only --quiet
 fi
 
-TARGET=/usr/local/bin/dotfiles
-echo "dotfiles: create symlink: $TARGET -> $DOTFILES_DIR/dotfiles.sh"
-sudo ln --force --symbolic "$DOTFILES_DIR/dotfiles.sh" "$TARGET"
-
 echo "dotfiles: command 'dotfiles' successfully installed"
-dotfiles --skip-update
+"$DOTFILES_DIR/dotfiles.sh" --skip-update
