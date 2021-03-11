@@ -22,7 +22,6 @@
     },
     "javascript.format.semicolons": "remove",
     "typescript.format.semicolons": "remove",
-    "go.useLanguageServer": true,
     "yaml.format.singleQuote": true,
     "shellcheck.disableVersionCheck": true,
     "shellcheck.enableQuickFix": true,
