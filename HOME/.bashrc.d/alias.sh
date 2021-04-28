@@ -17,3 +17,5 @@ alias xclip='xclip -selection clipboard'
 alias xopen='xdg-open'
 
 alias youtube-dl='youtube-dl --output "%(title)s.%(ext)s"'
+
+alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3'
