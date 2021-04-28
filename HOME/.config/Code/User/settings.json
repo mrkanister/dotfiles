@@ -1,4 +1,4 @@
-// Visual Studio Code v1.45.1
+// Visual Studio Code v1.55.2
 {
     "editor.fontSize": 14,
     "editor.minimap.enabled": false,
@@ -20,8 +20,9 @@
     "[markdown]": {
         "editor.wordWrap": "off",
     },
-    "javascript.format.semicolons": "remove",
-    "typescript.format.semicolons": "remove",
+    "[svelte]": {
+        "editor.formatOnSave": true,
+    },
     "yaml.format.singleQuote": true,
     "shellcheck.disableVersionCheck": true,
     "shellcheck.enableQuickFix": true,

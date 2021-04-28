@@ -6,6 +6,7 @@ golang.go
 mechatroner.rainbow-csv
 redhat.vscode-yaml
 stkb.rewrap
+svelte.svelte-vscode
 timonwong.shellcheck
 EOF
 )
