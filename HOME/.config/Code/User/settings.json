@@ -16,6 +16,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "terminal.integrated.fontSize": 14,
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "none",
     "[markdown]": {
