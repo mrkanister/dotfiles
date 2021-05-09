@@ -1,4 +1,4 @@
-// Visual Studio Code v1.55.2
+// Visual Studio Code v1.56.0
 {
     "editor.fontSize": 14,
     "editor.minimap.enabled": false,
@@ -17,6 +17,7 @@
     "files.trimFinalNewlines": true,
     "terminal.integrated.fontSize": 14,
     "workbench.settings.editor": "json",
+    "workbench.startupEditor": "none",
     "[markdown]": {
         "editor.wordWrap": "off",
     },
