@@ -19,10 +19,14 @@
     "workbench.editor.untitled.hint": "hidden",
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "none",
+    "update.mode": "none",
     "[markdown]": {
         "editor.wordWrap": "off",
     },
     "[svelte]": {
+        "editor.formatOnSave": true,
+    },
+    "[typescript]": {
         "editor.formatOnSave": true,
     },
     "yaml.format.singleQuote": true,
