@@ -12,6 +12,7 @@
 	co   = checkout
 	ds   = diff --staged
 	fush = push --force-with-lease
+	rim  = rebase --interactive master
 	st   = status
 	up   = push --set-upstream origin HEAD
 	wiff = diff --ignore-all-space
