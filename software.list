@@ -6,6 +6,7 @@ devscripts
 dfc
 docker-ce
 exfalso
+ffmpeg
 git
 google-chrome-stable
 google-cloud-sdk
