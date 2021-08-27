@@ -1,4 +1,4 @@
- [Effect-PresentWindows]
+[Effect-PresentWindows]
 BorderActivateAll=9
 
 [ElectricBorders]
@@ -10,3 +10,7 @@ Right=None
 Top=None
 TopLeft=None
 TopRight=None
+
+[NightColor]
+Active=true
+Mode=Constant
