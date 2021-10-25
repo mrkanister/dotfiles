@@ -9,8 +9,12 @@ get_git_info() {
     fi
 
     project=${toplevel##*/}
-    branch=$(git symbolic-ref --short HEAD)
-    echo " (git:$project/$branch)"
+    if git rebase --show-current-patch > /dev/null 2>&1; then
+        echo " (git:$project/<rebase in progress>)"
+    else
+        branch=$(git symbolic-ref --short HEAD)
+        echo " (git:$project/$branch)"
+    fi
 }
 
 get_prompt() {
