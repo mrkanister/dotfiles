@@ -16,3 +16,7 @@ for i in 1 2 3 4; do
     kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
         --group "kwin" --key "Switch to Desktop $i" "none,none,Switch to Desktop $i"
 done
+
+# Disable "Show Desktop" as it interferes with "Go to Implementations" in VSCode.
+kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
+    --group "plasmashell" --key "show dashboard" "none,Ctrl+F12,Show Desktop"
