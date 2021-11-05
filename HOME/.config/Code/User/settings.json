@@ -33,4 +33,5 @@
     "yaml.format.singleQuote": true,
     "shellcheck.disableVersionCheck": true,
     "shellcheck.enableQuickFix": true,
+    "svelte.enable-ts-plugin": true,
 }
