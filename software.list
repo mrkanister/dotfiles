@@ -12,6 +12,7 @@ google-chrome-stable
 google-cloud-sdk
 inkscape
 jq
+kcolorchooser
 ncdu
 nodejs
 numlockx
@@ -22,6 +23,7 @@ qpdf
 quodlibet
 shellcheck
 soundconverter
+texlive-full
 tig
 tmux
 tree
