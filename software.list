@@ -5,8 +5,10 @@ curl
 devscripts
 dfc
 docker-ce
+epiphany-browser
 exfalso
 ffmpeg
+firefox
 git
 google-chrome-stable
 google-cloud-sdk

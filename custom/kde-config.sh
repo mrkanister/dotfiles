@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Set Google Chrome as the default web browser for http and https URLs.
+kwriteconfig5 --file "$HOME/.config/kdeglobals" \
+    --group "General" --key "BrowserApplication" "google-chrome.desktop"
+
 # Enable single-click to open files and folder.
 kwriteconfig5 --file "$HOME/.config/kdeglobals" \
     --group "KDE" --key "SingleClick" --type "bool" true
