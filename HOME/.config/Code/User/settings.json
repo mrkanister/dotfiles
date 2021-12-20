@@ -1,6 +1,5 @@
 // Visual Studio Code v1.56.0
 {
-    "editor.fontSize": 14,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
@@ -15,7 +14,7 @@
     "extensions.ignoreRecommendations": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.enablePersistentSessions": false,
     "workbench.editor.untitled.hint": "hidden",
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "none",
