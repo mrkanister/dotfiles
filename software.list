@@ -1,6 +1,7 @@
 cloc
 code
 colordiff
+csvkit
 curl
 devscripts
 dfc
@@ -20,7 +21,6 @@ nodejs
 numlockx
 pdfarranger
 pwgen
-python-q-text-as-data
 qpdf
 quodlibet
 shellcheck
