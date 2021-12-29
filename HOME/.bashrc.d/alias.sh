@@ -4,6 +4,8 @@ alias dotfiles="\$HOME/.config/dotfiles/dotfiles.sh"
 
 alias ..='cd ..'
 
+alias gnucash='LANGUAGE=de_DE.utf8 LANG=de_DE.utf8 gnucash'
+
 alias igrep='grep -riI'
 
 alias ll='ls --classify --group-directories-first --human-readable -l'
