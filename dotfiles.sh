@@ -52,14 +52,21 @@ install_software() {
         comm -13 <(cat <<< "$installed") "$DOTFILES_DIR/software.list"
     )
 
-    if [ -z "$to_install" ]; then
+    local to_remove
+    to_remove=$(
+        comm -12 <(cat <<< "$installed") "$DOTFILES_DIR/software.remove.list"
+    )
+
+    if [ -z "$to_install" ] && [ -z "$to_remove" ]; then
         return
     fi
 
-    echo "dotfiles: - $(tr '\n' ' ' <<< $to_install)"
+    echo "dotfiles: - install: $(tr '\n' ' ' <<< $to_install)"
+    echo "dotfiles: - remove:  $(tr '\n' ' ' <<< $to_remove)"
 
     sudo apt-get update --quiet=2
     echo $to_install | xargs sudo apt-get --assume-yes install
+    echo $to_remove | xargs sudo apt-get --assume-yes remove
 }
 
 install_configurations() {
