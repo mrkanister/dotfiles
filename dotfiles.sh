@@ -40,14 +40,16 @@ install_repositories() {
 }
 
 install_software() {
-    # The call to 'grep' can fail if there a no new packages that need
-    # to be installed, so we explicitly want to ignore the return code.
-    # shellcheck disable=SC2155
-    local to_install=$(
-        xargs -a "$DOTFILES_DIR/software.list" \
-            apt-cache policy \
-        | grep --before-context 1 '(.*)' \
-        | grep --only-matching '^\w[^:]*'
+    local installed
+    installed=$(
+        apt list --installed 2> /dev/null \
+        | cut -d / -f 1 \
+        | sort --unique
+    )
+
+    local to_install
+    to_install=$(
+        comm -13 <(cat <<< "$installed") "$DOTFILES_DIR/software.list"
     )
 
     if [ -z "$to_install" ]; then
