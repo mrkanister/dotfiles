@@ -1,3 +1,8 @@
+[DELL0A34:00 0488:101D Touchpad]
+tapAndDrag=true
+tapDragLock=false
+tapToClick=true
+
 [DLL0665:01 06CB:76AD Touchpad]
 tapAndDrag=true
 tapDragLock=false
