@@ -1,0 +1,10 @@
+# Ignore everything not starting with a dot.
+*
+!.*
+
+# Ignore this repository itself.
+.config/dotfiles
+
+# Ignore big directories.
+.config/google-chrome
+.config/Code

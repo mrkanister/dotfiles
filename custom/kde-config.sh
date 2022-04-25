@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Reduce the keyboard repeat delay to 250 ms (from 600 ms).
+kwriteconfig5 --file "$HOME/.config/kcminputrc" \
+    --group "Keyboard" --key "RepeatDelay" "250"
+
 # Set Google Chrome as the default web browser for http and https URLs.
 kwriteconfig5 --file "$HOME/.config/kdeglobals" \
     --group "General" --key "BrowserApplication" "google-chrome.desktop"
