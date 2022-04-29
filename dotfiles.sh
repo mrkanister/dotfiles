@@ -67,6 +67,7 @@ install_software() {
     sudo apt-get update --quiet=2
     echo $to_install | xargs sudo apt-get --assume-yes install
     echo $to_remove | xargs sudo apt-get --assume-yes remove
+    sudo apt-get --assume-yes autoremove
 }
 
 install_configurations() {
