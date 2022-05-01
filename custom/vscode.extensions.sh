@@ -3,6 +3,7 @@
 EXTENSIONS=$(cat <<EOF
 DavidAnson.vscode-markdownlint
 golang.go
+James-Yu.latex-workshop
 mechatroner.rainbow-csv
 redhat.vscode-yaml
 stkb.rewrap
