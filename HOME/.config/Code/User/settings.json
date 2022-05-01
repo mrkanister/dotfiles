@@ -1,4 +1,4 @@
-// Visual Studio Code v1.56.0
+// Visual Studio Code >= v1.66.2
 {
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
