@@ -30,5 +30,8 @@
 	prune     = true
 	pruneTags = true
 
+[init]
+	defaultBranch = master
+
 [pull]
 	ff = only
