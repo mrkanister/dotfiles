@@ -28,3 +28,7 @@ done
 # Disable "Show Desktop" as it interferes with "Go to Implementations" in VSCode.
 kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
     --group "plasmashell" --key "show dashboard" "none,Ctrl+F12,Show Desktop"
+
+# Hide Plasma browser integration reminder
+kwriteconfig5 --file "$HOME/.config/kded5rc" \
+    --group "Module-browserintegrationreminder" --key "autoload" --type "bool" false
