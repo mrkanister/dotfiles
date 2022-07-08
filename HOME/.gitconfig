@@ -8,6 +8,9 @@
 #
 # export EMAIL=$GIT_AUTHOR_EMAIL
 
+[advice]
+	skippedCherryPicks = false
+
 [alias]
 	co   = checkout
 	ds   = diff --staged
