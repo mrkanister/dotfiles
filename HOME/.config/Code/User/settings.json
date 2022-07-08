@@ -21,6 +21,7 @@
     "update.mode": "none",
     "[markdown]": {
         "editor.wordWrap": "off",
+        "editor.formatOnSave": true,
     },
     "[svelte]": {
         "editor.formatOnSave": true,
