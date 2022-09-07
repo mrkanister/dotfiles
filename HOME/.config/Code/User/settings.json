@@ -23,6 +23,7 @@
     "[markdown]": {
         "editor.wordWrap": "off",
         "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     },
     "[svelte]": {
         "editor.formatOnSave": true,
