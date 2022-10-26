@@ -27,10 +27,14 @@ susu() ( # "(", not "{" --> because of "set -e" in the subscript
     sudo apt-get autoclean
 )
 
+png_alpha_to_white() {
+    for img in "$@"; do
+        convert "$img" -alpha remove -background white "$img.white"
+    done
+}
+
 png_white_to_alpha() {
     for img in "$@"; do
         convert "$img" -transparent white "$img.alpha"
-        rm "$img"
-        mv "$img.alpha" "$img"
     done
 }
