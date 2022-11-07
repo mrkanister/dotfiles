@@ -16,7 +16,7 @@
 	ds   = diff --staged
 	fush = push --force-with-lease
 	rim  = rebase --interactive master
-	st   = status
+	st   = status --branch --short
 	up   = push --set-upstream origin HEAD
 	wiff = diff --ignore-all-space
 
