@@ -22,13 +22,8 @@
     "update.mode": "none",
     "[markdown]": {
         "editor.wordWrap": "off",
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     },
-    "[svelte]": {
-        "editor.formatOnSave": true,
-    },
-    "[typescript]": {
+    "[css][html][javascript][markdown][svelte][typescript][yaml]": {
         "editor.formatOnSave": true,
     },
     "redhat.telemetry.enabled": false,

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 EXTENSIONS=$(cat <<EOF
-DavidAnson.vscode-markdownlint
 esbenp.prettier-vscode
 golang.go
 James-Yu.latex-workshop
