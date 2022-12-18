@@ -16,6 +16,7 @@
     "files.trimFinalNewlines": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.showExitAlert": false,
     "workbench.editor.untitled.hint": "hidden",
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "none",
