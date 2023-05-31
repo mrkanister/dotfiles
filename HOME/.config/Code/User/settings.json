@@ -27,6 +27,7 @@
     "[css][html][javascript][markdown][svelte][typescript][yaml]": {
         "editor.formatOnSave": true,
     },
+    "go.toolsManagement.autoUpdate": true,
     "redhat.telemetry.enabled": false,
     "yaml.format.singleQuote": true,
     "shellcheck.disableVersionCheck": true,
