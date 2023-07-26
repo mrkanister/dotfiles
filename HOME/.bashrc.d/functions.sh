@@ -38,3 +38,9 @@ png_white_to_alpha() {
         convert "$img" -transparent white "$img.alpha"
     done
 }
+
+png_trim() {
+    for img in "$@"; do
+        convert -trim "$img" "$img.trim"
+    done
+}
