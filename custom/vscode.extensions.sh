@@ -4,6 +4,7 @@ EXTENSIONS=$(cat <<EOF
 esbenp.prettier-vscode
 golang.go
 James-Yu.latex-workshop
+jock.svg
 mechatroner.rainbow-csv
 redhat.vscode-yaml
 stkb.rewrap
