@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>Liferea Feed List Export</title>
+  </head>
+  <body>
+    <outline title="Unread" text="Unread" description="Unread" type="vfolder" id="egbocmy" sortColumn="time" matchType="any" unreadOnly="false" collapsed="true">
+      <outline type="rule" text="Read status" rule="unread" value="" additive="true"/>
+    </outline>
+    <outline title="Feeds" text="Feeds" description="Feeds" type="folder" id="dbgsswl" sortColumn="time" expanded="true">
+      <outline title="Svelte blog" text="Svelte blog" description="Svelte blog" type="rss" id="houhcef" sortColumn="time" xmlUrl="https://svelte.dev/blog/rss.xml" htmlUrl="https://svelte.dev/blog" updateInterval="-1" collapsed="true"/>
+      <outline title="xkcd.com" text="xkcd.com" description="xkcd.com" type="rss" id="yofvqvg" sortColumn="time" xmlUrl="https://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/" updateInterval="-1" collapsed="true"/>
+      <outline title="The Go Blog" text="The Go Blog" description="The Go Blog" type="atom" id="wksprrv" sortColumn="time" xmlUrl="https://go.dev/blog/feed.atom" htmlUrl="https://go.dev/blog/feed.atom" updateInterval="-1" collapsed="true"/>
+    </outline>
+  </body>
+</opml>
