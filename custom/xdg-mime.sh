@@ -11,3 +11,4 @@ xdg-mime default google-chrome.desktop application/pdf
 xdg-mime default org.inkscape.Inkscape.desktop image/svg+xml
 xdg-mime default vlc_vlc.desktop audio/mpeg
 xdg-mime default vlc_vlc.desktop video/mpeg
+xdg-mime default vlc_vlc.desktop video/webm
