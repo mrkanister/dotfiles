@@ -27,6 +27,13 @@ susu() ( # "(", not "{" --> because of "set -e" in the subscript
     sudo apt-get autoclean
 )
 
+pdf_collate() {
+    # Merge two PDF files with interleaving pages where:
+    #  - A has the odd pages
+    #  - B has the even pages in reverse
+    pdftk A="$1" B="$2" shuffle A Bend-1 output "$1.$2.collated.pdf"
+}
+
 png_alpha_to_white() {
     for img in "$@"; do
         convert "$img" -alpha remove -background white "$img.white"
