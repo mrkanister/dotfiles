@@ -3,7 +3,6 @@
 EXTENSIONS=$(cat <<EOF
 esbenp.prettier-vscode
 golang.go
-james-yu.latex-workshop
 jock.svg
 mechatroner.rainbow-csv
 stkb.rewrap
