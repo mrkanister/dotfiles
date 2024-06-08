@@ -4,6 +4,10 @@
 kwriteconfig5 --file "$HOME/.config/kcminputrc" \
     --group "Keyboard" --key "RepeatDelay" "250"
 
+# Increase pointer acceleration to 0.6 (from 0.0).
+kwriteconfig5 --file "$HOME/.config/kcminputrc" \
+    --group "Mouse" --key "XLbInptPointerAcceleration" "0.6"
+
 # Set Google Chrome as the default web browser for http and https URLs.
 kwriteconfig5 --file "$HOME/.config/kdeglobals" \
     --group "General" --key "BrowserApplication" "google-chrome.desktop"
