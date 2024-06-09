@@ -23,6 +23,10 @@ kwriteconfig5 --file "$HOME/.kde/share/config/kdeglobals" \
 kwriteconfig5 --file "$HOME/.config/konsolerc" \
     --group "Notification Messages" --key "CloseAllTabs" --type "bool" true
 
+# Position tab bar below the terminal (default: above the terminal).
+kwriteconfig5 --file "$HOME/.config/konsolerc" \
+    --group "TabBar" --key "TabBarPosition" "Bottom"
+
 # Disable "Switch to Desktop" shortcuts to avoid collisions with VSCode.
 for i in 1 2 3 4; do
     kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
