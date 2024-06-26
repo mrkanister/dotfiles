@@ -65,9 +65,9 @@ install_software() {
     echo "dotfiles: - remove:  $(tr '\n' ' ' <<< $to_remove)"
 
     sudo apt-get update --quiet=2
-    echo $to_install | xargs sudo apt-get --assume-yes install
     echo $to_remove | xargs sudo apt-get --assume-yes remove
     sudo apt-get --assume-yes autoremove
+    echo $to_install | xargs sudo apt-get --assume-yes install
 }
 
 install_configurations() {
