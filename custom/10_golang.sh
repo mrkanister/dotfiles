@@ -2,7 +2,7 @@
 set -euo pipefail
 
 BASEDIR="/opt/go"
-VERSION="1.22.6"
+VERSION="1.23.0"
 GODIR="$BASEDIR/$VERSION"
 URL="https://dl.google.com/go/go$VERSION.linux-amd64.tar.gz"
 
