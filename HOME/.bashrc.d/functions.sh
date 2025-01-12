@@ -51,3 +51,13 @@ png_trim() {
         convert -trim "$img" "$img.trim"
     done
 }
+
+pdf_to_webp() {
+    for pdf in "$@"; do
+        pdftoppm "$pdf" "$pdf"
+        for ppm in "$pdf"*.ppm; do
+            cwebp -quiet "$ppm" -o "$ppm.webp"
+            rm "$ppm"
+        done
+    done
+}
