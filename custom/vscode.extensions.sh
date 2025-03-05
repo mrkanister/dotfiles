@@ -3,6 +3,7 @@
 EXTENSIONS=$(cat <<EOF
 esbenp.prettier-vscode
 golang.go
+jacobcassidy.css-nesting-syntax-highlighting
 jock.svg
 mechatroner.rainbow-csv
 stkb.rewrap

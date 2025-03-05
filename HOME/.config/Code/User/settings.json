@@ -1,4 +1,4 @@
-// Visual Studio Code >= v1.89.1
+// Visual Studio Code >= v1.97.2
 {
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
@@ -20,9 +20,10 @@
     "files.trimFinalNewlines": true,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.showExitAlert": false,
+    "update.mode": "none",
+    "window.titleBarStyle": "native",
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "none",
-    "update.mode": "none",
     "[markdown]": {
         "editor.wordWrap": "off",
     },
