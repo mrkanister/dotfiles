@@ -2,9 +2,9 @@
 set -euo pipefail
 
 BASEDIR="/opt/node"
-VERSION="24.0.1"
+VERSION="24.0.2"
 NODEDIR="$BASEDIR/$VERSION"
-URL="https://nodejs.org/dist/v24.0.1/node-v$VERSION-linux-x64.tar.xz"
+URL="https://nodejs.org/dist/v$VERSION/node-v$VERSION-linux-x64.tar.xz"
 
 if [[ -d $NODEDIR ]]; then
     exit
