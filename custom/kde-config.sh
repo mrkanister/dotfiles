@@ -40,3 +40,8 @@ kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
 # Hide Plasma browser integration reminder
 kwriteconfig5 --file "$HOME/.config/kded5rc" \
     --group "Module-browserintegrationreminder" --key "autoload" --type "bool" false
+
+# Remove "Plasma Discover" from launcher
+kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" \
+    --group Containments --group 2 --group Applets --group 5 --group Configuration --group General \
+    --key launchers "applications:systemsettings.desktop,preferred://filemanager,preferred://browser"
