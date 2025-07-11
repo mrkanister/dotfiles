@@ -1,4 +1,4 @@
-// Visual Studio Code >= v1.101.0
+// Visual Studio Code >= v1.102.0
 {
     "chat.commandCenter.enabled": false,
     "editor.formatOnSave": true,
@@ -19,6 +19,7 @@
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.showExitAlert": false,
     "update.mode": "none",
+    "update.showReleaseNotes": false,
     "window.titleBarStyle": "native",
     "workbench.editorAssociations": {
         "*.svg": "default",
