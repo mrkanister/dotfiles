@@ -1,6 +1,8 @@
 // Visual Studio Code >= v1.102.0
 {
+    "chat.mcp.enabled": false,
     "chat.commandCenter.enabled": false,
+    "chat.agent.enabled": false,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
@@ -21,6 +23,7 @@
     "update.mode": "none",
     "update.showReleaseNotes": false,
     "window.titleBarStyle": "native",
+    "workbench.editor.empty.hint": "hidden",
     "workbench.editorAssociations": {
         "*.svg": "default",
     },
