@@ -1,6 +1,6 @@
 // Visual Studio Code >= v1.102.0
 {
-    "chat.mcp.enabled": false,
+    "chat.mcp.access": "none",
     "chat.commandCenter.enabled": false,
     "chat.agent.enabled": false,
     "editor.formatOnSave": true,
