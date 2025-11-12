@@ -2,7 +2,7 @@
 set -euo pipefail
 
 BASEDIR="/opt/node"
-VERSION="25.1.0"
+VERSION="25.2.0"
 NODEDIR="$BASEDIR/$VERSION"
 URL="https://nodejs.org/dist/v$VERSION/node-v$VERSION-linux-x64.tar.xz"
 
