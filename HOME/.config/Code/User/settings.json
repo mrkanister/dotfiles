@@ -1,8 +1,6 @@
-// Visual Studio Code >= v1.102.0
+// Visual Studio Code >= v1.106.3
 {
-    "chat.mcp.access": "none",
-    "chat.commandCenter.enabled": false,
-    "chat.agent.enabled": false,
+    "chat.disableAIFeatures": true,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
