@@ -32,6 +32,7 @@ pdftk-java
 pwgen
 qpdf
 qrencode
+qttools5-dev-tools
 quodlibet
 shellcheck
 soundconverter
