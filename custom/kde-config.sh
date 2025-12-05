@@ -51,3 +51,7 @@ kwriteconfig5 --file "$HOME/.config/kwinrc" \
     --group "EdgeBarrier" --key "CornerBarrier" --type "bool" false
 kwriteconfig5 --file "$HOME/.config/kwinrc" \
     --group "EdgeBarrier" --key "EdgeBarrier" 0
+
+# Spectacle
+kwriteconfig5 --file "$HOME/.config/spectaclerc" \
+    --group "General" --key "autoSaveImage" --type "bool" true
