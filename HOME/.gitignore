@@ -1,0 +1,15 @@
+code/
+Desktop/
+Documents/
+Downloads/
+snap/
+.cache/
+.config/BambuStudio/
+.config/Code/
+!.config/Code/User/keybindings.json
+!.config/Code/User/settings.json
+.config/dotfiles/
+.config/google-chrome/
+.config/plasma-org.kde.plasma.desktop-appletsrc.lock
+.npm/
+.vscode/

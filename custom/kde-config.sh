@@ -37,11 +37,17 @@ done
 kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
     --group "plasmashell" --key "show dashboard" "none,Ctrl+F12,Show Desktop"
 
-# Hide Plasma browser integration reminder
+# Hide Plasma browser integration reminder.
 kwriteconfig5 --file "$HOME/.config/kded5rc" \
     --group "Module-browserintegrationreminder" --key "autoload" --type "bool" false
 
-# Remove "Plasma Discover" from launcher
+# Remove "Plasma Discover" from launcher.
 kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" \
     --group Containments --group 2 --group Applets --group 5 --group Configuration --group General \
     --key launchers "applications:systemsettings.desktop,preferred://filemanager,preferred://browser"
+
+# Prevent cursor from sticking to window and screen edges.
+kwriteconfig5 --file "$HOME/.config/kwinrc" \
+    --group "EdgeBarrier" --key "CornerBarrier" --type "bool" false
+kwriteconfig5 --file "$HOME/.config/kwinrc" \
+    --group "EdgeBarrier" --key "EdgeBarrier" 0
