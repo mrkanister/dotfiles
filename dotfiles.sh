@@ -9,28 +9,13 @@ install_repositories() {
 
     local sources_src="$DOTFILES_DIR/ROOT/etc/apt/sources.list.d"
     local sources_dst="/etc/apt/sources.list.d"
-    for file in "$sources_src"/*.list; do
+    for file in "$sources_src"/*.sources; do
         local filename="${file##*/}"
         if [ ! -f "$sources_dst/$filename" ]; then
             echo "dotfiles: - $filename"
             changes=true
 
             sudo cp "$file" "$sources_dst"
-        fi
-    done
-
-    local keys_src="$DOTFILES_DIR/ROOT/etc/apt/trusted.pub.d"
-    local keys_dst="/etc/apt/trusted.gpg.d"
-    for file in "$keys_src"/*.pub; do
-        local filename="${file##*/}"
-        local file_dst="$keys_dst/${filename%.*}.gpg"
-        if [ ! -f "$file_dst" ]; then
-            echo "dotfiles: - $filename"
-            changes=true
-
-            gpg --dearmor < "$file" \
-            | sudo tee "$file_dst" \
-            > /dev/null
         fi
     done
 
