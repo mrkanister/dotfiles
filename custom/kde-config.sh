@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Turn on NumLock on startup.
+kwriteconfig5 --file "$HOME/.config/kcminputrc" \
+    --group "Keyboard" --key "NumLock" 0
+
 # Reduce the keyboard repeat delay to 250 ms (from 600 ms).
 kwriteconfig5 --file "$HOME/.config/kcminputrc" \
     --group "Keyboard" --key "RepeatDelay" "250"
