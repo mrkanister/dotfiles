@@ -17,6 +17,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.showExitAlert": false,
     "terminal.integrated.stickyScroll.enabled": false,
     "update.mode": "none",
