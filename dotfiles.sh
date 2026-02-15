@@ -11,7 +11,7 @@ install_repositories() {
     local sources_dst="/etc/apt/sources.list.d"
     for file in "$sources_src"/*.sources; do
         local filename="${file##*/}"
-        if [ ! -f "$sources_dst/$filename" ]; then
+        if ! cmp -s "$file" "$sources_dst/$filename"; then
             echo "dotfiles: - $filename"
             changes=true
 
