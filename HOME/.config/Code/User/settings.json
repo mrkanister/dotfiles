@@ -1,4 +1,4 @@
-// Visual Studio Code >= v1.106.3
+// Visual Studio Code >= v1.113
 {
     "chat.disableAIFeatures": true,
     "editor.formatOnSave": true,
@@ -23,6 +23,7 @@
     "update.mode": "none",
     "update.showReleaseNotes": false,
     "window.titleBarStyle": "native",
+    "workbench.colorTheme": "Dark Modern",
     "workbench.editor.empty.hint": "hidden",
     "workbench.editorAssociations": {
         "*.svg": "default",
