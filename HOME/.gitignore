@@ -11,5 +11,8 @@ snap/
 .config/dotfiles/
 .config/google-chrome/
 .config/plasma-org.kde.plasma.desktop-appletsrc.lock
+.local/share/Trash
+.local/share/DBeaverData
 .npm/
 .vscode/
+.wine/
