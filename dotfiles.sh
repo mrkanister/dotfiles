@@ -27,9 +27,8 @@ install_repositories() {
 install_software() {
     local installed
     installed=$(
-        apt list --installed 2> /dev/null \
-        | cut -d / -f 1 \
-        | sort --unique
+        dpkg-query --show --showformat='${binary:Package}\n' \
+        | cut --delimiter ':' --fields '1'
     )
 
     local to_install
@@ -50,8 +49,11 @@ install_software() {
     echo "dotfiles: - remove:  $(tr '\n' ' ' <<< $to_remove)"
 
     sudo apt-get update --quiet=2
+
     echo $to_remove | xargs sudo apt-get --assume-yes remove
     sudo apt-get --assume-yes autoremove
+    echo $to_remove | xargs sudo dpkg --purge
+
     echo $to_install | xargs sudo apt-get --assume-yes install
 }
 
