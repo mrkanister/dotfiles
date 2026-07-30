@@ -19,3 +19,5 @@ alias xclip='xclip -selection clipboard'
 alias xopen='xdg-open'
 
 alias yt-dlp-mp4='yt-dlp --format "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+
+alias yt-dlp-mp4-v2='yt-dlp --format "bestvideo[ext=mp4].2+bestaudio[ext=m4a]/best[ext=mp4]/best"'
