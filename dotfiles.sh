@@ -50,9 +50,11 @@ install_software() {
 
     sudo apt-get update --quiet=2
 
-    echo $to_remove | xargs sudo apt-get --assume-yes remove
-    sudo apt-get --assume-yes autoremove
-    echo $to_remove | xargs sudo dpkg --purge
+    if [ "$to_remove" ]; then
+        echo $to_remove | xargs sudo apt-get --assume-yes remove
+        sudo apt-get --assume-yes autoremove
+        echo $to_remove | xargs sudo dpkg --purge
+    fi
 
     echo $to_install | xargs sudo apt-get --assume-yes install
 }
