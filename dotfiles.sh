@@ -28,7 +28,8 @@ install_software() {
     local installed
     installed=$(
         dpkg-query --show --showformat='${binary:Package}\n' \
-        | cut --delimiter ':' --fields '1'
+        | cut --delimiter ':' --fields '1' \
+        | sort --unique
     )
 
     local to_install
