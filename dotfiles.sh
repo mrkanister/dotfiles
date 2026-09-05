@@ -29,17 +29,17 @@ install_software() {
     installed=$(
         dpkg-query --show --showformat='${binary:Package}\n' \
         | cut --delimiter ':' --fields '1' \
-        | sort --unique
+        | LC_ALL=C sort --unique
     )
 
     local to_install
     to_install=$(
-        comm -13 <(cat <<< "$installed") "$DOTFILES_DIR/software.list"
+        LC_ALL=C comm -13 <(cat <<< "$installed") "$DOTFILES_DIR/software.list"
     )
 
     local to_remove
     to_remove=$(
-        comm -12 <(cat <<< "$installed") "$DOTFILES_DIR/software.remove.list"
+        LC_ALL=C comm -12 <(cat <<< "$installed") "$DOTFILES_DIR/software.remove.list"
     )
 
     if [ -z "$to_install" ] && [ -z "$to_remove" ]; then
