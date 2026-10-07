@@ -1,61 +1,43 @@
 #!/bin/bash
 
-# Turn on NumLock on startup.
-kwriteconfig5 --file "$HOME/.config/kcminputrc" \
-    --group "Keyboard" --key "NumLock" 0
+## System Settings
 
-# Reduce the keyboard repeat delay to 250 ms (from 600 ms).
-kwriteconfig5 --file "$HOME/.config/kcminputrc" \
-    --group "Keyboard" --key "RepeatDelay" "250"
-
-# Increase pointer acceleration to 0.6 (from 0.0).
-kwriteconfig5 --file "$HOME/.config/kcminputrc" \
-    --group "Mouse" --key "XLbInptPointerAcceleration" "0.6"
-
-# Set Google Chrome as the default web browser for http and https URLs.
-kwriteconfig5 --file "$HOME/.config/kdeglobals" \
-    --group "General" --key "BrowserApplication" "google-chrome.desktop"
-
-# Enable single-click to open files and folder.
-kwriteconfig5 --file "$HOME/.config/kdeglobals" \
-    --group "KDE" --key "SingleClick" --type "bool" true
-
-kwriteconfig5 --file "$HOME/.kde/share/config/kdeglobals" \
-    --group "KDE" --key "SingleClick" --type "bool" true
-
-# Don't show "Confirm Close" for more than two open terminals.
-kwriteconfig5 --file "$HOME/.config/konsolerc" \
-    --group "Notification Messages" --key "CloseAllTabs" --type "bool" true
-
-# Position tab bar below the terminal (default: above the terminal).
-kwriteconfig5 --file "$HOME/.config/konsolerc" \
-    --group "TabBar" --key "TabBarPosition" "Bottom"
-
-# Disable "Switch to Desktop" shortcuts to avoid collisions with VSCode.
+### Keyboard
+kwriteconfig5 --file ~/.config/kcminputrc --group Keyboard --key NumLock 0
+kwriteconfig5 --file ~/.config/kcminputrc --group Keyboard --key RepeatDelay 250
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group plasmashell --key "show dashboard" "none,Ctrl+F12,Show Desktop"
 for i in 1 2 3 4; do
-    kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
-        --group "kwin" --key "Switch to Desktop $i" "none,none,Switch to Desktop $i"
+    kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group kwin --key "Switch to Desktop $i" "none,none,Switch to Desktop $i"
 done
 
-# Disable "Show Desktop" as it interferes with "Go to Implementations" in VSCode.
-kwriteconfig5 --file "$HOME/.config/kglobalshortcutsrc" \
-    --group "plasmashell" --key "show dashboard" "none,Ctrl+F12,Show Desktop"
+### Display & Monitor
+kwriteconfig5 --file ~/.config/kwinrc --group EdgeBarrier --key CornerBarrier --type bool false
+kwriteconfig5 --file ~/.config/kwinrc --group EdgeBarrier --key EdgeBarrier 0
+kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Active --type bool true
+kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Mode Constant
 
-# Hide Plasma browser integration reminder.
-kwriteconfig5 --file "$HOME/.config/kded5rc" \
-    --group "Module-browserintegrationreminder" --key "autoload" --type "bool" false
+### General Behavior
+kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key DndBehavior MoveIfSameDevice
+kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key SingleClick --type bool true
 
-# Remove "Plasma Discover" from launcher.
-kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" \
-    --group Containments --group 2 --group Applets --group 5 --group Configuration --group General \
-    --key launchers "applications:systemsettings.desktop,preferred://filemanager,preferred://browser"
+### Screen Locking
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Autolock --type bool false
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Timeout 0
 
-# Prevent cursor from sticking to window and screen edges.
-kwriteconfig5 --file "$HOME/.config/kwinrc" \
-    --group "EdgeBarrier" --key "CornerBarrier" --type "bool" false
-kwriteconfig5 --file "$HOME/.config/kwinrc" \
-    --group "EdgeBarrier" --key "EdgeBarrier" 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC         --group SuspendAndShutdown --key AutoSuspendAction 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group Battery    --group SuspendAndShutdown --key AutoSuspendAction 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group LowBattery --group SuspendAndShutdown --key AutoSuspendAction 0
 
-# Spectacle
-kwriteconfig5 --file "$HOME/.config/spectaclerc" \
-    --group "General" --key "autoSaveImage" --type "bool" true
+### Sessions
+kwriteconfig5 --file ~/.config/ksmserverrc --group General --key loginMode emptySession
+
+## App Settings
+
+### Dolphin
+kwriteconfig5 --file ~/.config/dolphinrc --group DetailsMode --key PreviewSize 16
+kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmDelete --type bool false
+kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmEmptyTrash --type bool false
+
+### Konsole
+kwriteconfig5 --file ~/.config/konsolerc --group "Notification Messages" --key CloseAllTabs --type bool true
+kwriteconfig5 --file ~/.config/konsolerc --group TabBar --key TabBarPosition Bottom

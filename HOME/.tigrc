@@ -1,1 +1,0 @@
-bind diff 7 !git diff %(commit)^ %(commit)

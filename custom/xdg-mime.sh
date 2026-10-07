@@ -12,6 +12,9 @@ xdg-mime default code.desktop text/markdown
 xdg-mime default code.desktop text/plain
 xdg-mime default code.desktop text/tab-separated-values
 xdg-mime default google-chrome.desktop application/pdf
+xdg-mime default google-chrome.desktop x-scheme-handler/http
+xdg-mime default google-chrome.desktop x-scheme-handler/https
+xdg-mime default google-chrome.desktop x-scheme-handler/mailto
 xdg-mime default org.inkscape.Inkscape.desktop image/svg+xml
 xdg-mime default vlc_vlc.desktop audio/mpeg
 xdg-mime default vlc_vlc.desktop audio/x-opus+ogg
