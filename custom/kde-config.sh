@@ -26,9 +26,12 @@ kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Timeout -- 0
 
 ## Power Management
 
-kwriteconfig5 --file ~/.config/powerdevilrc --group AC         --group SuspendAndShutdown --key AutoSuspendAction -- 0
-kwriteconfig5 --file ~/.config/powerdevilrc --group Battery    --group SuspendAndShutdown --key AutoSuspendAction -- 0
-kwriteconfig5 --file ~/.config/powerdevilrc --group LowBattery --group SuspendAndShutdown --key AutoSuspendAction -- 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC --group SuspendAndShutdown --key AutoSuspendAction -- 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC --group SuspendAndShutdown --key LidAction -- 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC --group Display --key DimDisplayIdleTimeoutSec -- -1
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC --group Display --key DimDisplayWhenIdle -- false
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC --group Display --key TurnOffDisplayIdleTimeoutSec -- -1
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC --group Display --key TurnOffDisplayWhenIdle -- false
 
 ### Sessions
 kwriteconfig5 --file ~/.config/ksmserverrc --group General --key loginMode -- emptySession
