@@ -3,41 +3,43 @@
 ## System Settings
 
 ### Keyboard
-kwriteconfig5 --file ~/.config/kcminputrc --group Keyboard --key NumLock 0
-kwriteconfig5 --file ~/.config/kcminputrc --group Keyboard --key RepeatDelay 250
-kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group plasmashell --key "show dashboard" "none,Ctrl+F12,Show Desktop"
+kwriteconfig5 --file ~/.config/kcminputrc --group Keyboard --key NumLock -- 0
+kwriteconfig5 --file ~/.config/kcminputrc --group Keyboard --key RepeatDelay -- 250
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group plasmashell --key "show dashboard" -- "none,Ctrl+F12,Show Desktop"
 for i in 1 2 3 4; do
-    kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group kwin --key "Switch to Desktop $i" "none,none,Switch to Desktop $i"
+    kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group kwin --key "Switch to Desktop $i" -- "none,none,Switch to Desktop $i"
 done
 
 ### Display & Monitor
-kwriteconfig5 --file ~/.config/kwinrc --group EdgeBarrier --key CornerBarrier --type bool false
-kwriteconfig5 --file ~/.config/kwinrc --group EdgeBarrier --key EdgeBarrier 0
-kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Active --type bool true
-kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Mode Constant
+kwriteconfig5 --file ~/.config/kwinrc --group EdgeBarrier --key CornerBarrier -- false
+kwriteconfig5 --file ~/.config/kwinrc --group EdgeBarrier --key EdgeBarrier -- 0
+kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Active -- true
+kwriteconfig5 --file ~/.config/kwinrc --group NightColor --key Mode -- Constant
 
 ### General Behavior
-kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key DndBehavior MoveIfSameDevice
-kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key SingleClick --type bool true
+kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key DndBehavior -- MoveIfSameDevice
+kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key SingleClick -- true
 
 ### Screen Locking
-kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Autolock --type bool false
-kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Timeout 0
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Autolock -- false
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Timeout -- 0
 
-kwriteconfig5 --file ~/.config/powerdevilrc --group AC         --group SuspendAndShutdown --key AutoSuspendAction 0
-kwriteconfig5 --file ~/.config/powerdevilrc --group Battery    --group SuspendAndShutdown --key AutoSuspendAction 0
-kwriteconfig5 --file ~/.config/powerdevilrc --group LowBattery --group SuspendAndShutdown --key AutoSuspendAction 0
+## Power Management
+
+kwriteconfig5 --file ~/.config/powerdevilrc --group AC         --group SuspendAndShutdown --key AutoSuspendAction -- 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group Battery    --group SuspendAndShutdown --key AutoSuspendAction -- 0
+kwriteconfig5 --file ~/.config/powerdevilrc --group LowBattery --group SuspendAndShutdown --key AutoSuspendAction -- 0
 
 ### Sessions
-kwriteconfig5 --file ~/.config/ksmserverrc --group General --key loginMode emptySession
+kwriteconfig5 --file ~/.config/ksmserverrc --group General --key loginMode -- emptySession
 
 ## App Settings
 
 ### Dolphin
-kwriteconfig5 --file ~/.config/dolphinrc --group DetailsMode --key PreviewSize 16
-kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmDelete --type bool false
-kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmEmptyTrash --type bool false
+kwriteconfig5 --file ~/.config/dolphinrc --group DetailsMode --key PreviewSize -- 16
+kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmDelete -- false
+kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmEmptyTrash -- false
 
 ### Konsole
-kwriteconfig5 --file ~/.config/konsolerc --group "Notification Messages" --key CloseAllTabs --type bool true
-kwriteconfig5 --file ~/.config/konsolerc --group TabBar --key TabBarPosition Bottom
+kwriteconfig5 --file ~/.config/konsolerc --group "Notification Messages" --key CloseAllTabs -- true
+kwriteconfig5 --file ~/.config/konsolerc --group TabBar --key TabBarPosition -- Bottom
