@@ -46,3 +46,9 @@ kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmEmptyTra
 ### Konsole
 kwriteconfig5 --file ~/.config/konsolerc --group "Notification Messages" --key CloseAllTabs -- true
 kwriteconfig5 --file ~/.config/konsolerc --group TabBar --key TabBarPosition -- Bottom
+
+### Spectacle
+
+kwriteconfig5 --file ~/.config/spectaclerc --group "General" --key autoSaveImage -- true
+kwriteconfig5 --file ~/.config/spectaclerc --group "General" --key rememberSelectionRect -- Always
+kwriteconfig5 --file ~/.config/spectaclerc --group "GuiConfig" --key captureMode -- 0
