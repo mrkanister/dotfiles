@@ -4,8 +4,6 @@ EXTENSIONS=$(cat <<EOF
 dnut.rewrap-revived
 esbenp.prettier-vscode
 golang.go
-jacobcassidy.css-nesting-syntax-highlighting
-jebbs.plantuml
 jock.svg
 mechatroner.rainbow-csv
 svelte.svelte-vscode
