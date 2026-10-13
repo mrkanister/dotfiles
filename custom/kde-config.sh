@@ -38,6 +38,9 @@ kwriteconfig5 --file ~/.config/ksmserverrc --group General --key loginMode -- em
 
 ## App Settings
 
+### Daemon
+kwriteconfig5 --file ~/.config/kded5rc --group "Module-browserintegrationreminder" --key autoload -- false
+
 ### Dolphin
 kwriteconfig5 --file ~/.config/dolphinrc --group DetailsMode --key PreviewSize -- 16
 kwriteconfig5 --file ~/.config/kiorc --group Confirmations --key ConfirmDelete -- false
@@ -48,7 +51,6 @@ kwriteconfig5 --file ~/.config/konsolerc --group "Notification Messages" --key C
 kwriteconfig5 --file ~/.config/konsolerc --group TabBar --key TabBarPosition -- Bottom
 
 ### Spectacle
-
 kwriteconfig5 --file ~/.config/spectaclerc --group "General" --key autoSaveImage -- true
 kwriteconfig5 --file ~/.config/spectaclerc --group "General" --key rememberSelectionRect -- Always
 kwriteconfig5 --file ~/.config/spectaclerc --group "GuiConfig" --key captureMode -- 0
