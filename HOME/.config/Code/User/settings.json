@@ -9,7 +9,6 @@
     "editor.suggest.localityBonus": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.sortOrder": "type",
     "extensions.ignoreRecommendations": true,
     "files.associations": {
         ".env.local": "properties",
